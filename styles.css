@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+
+
+/* General Navbar Styling */
+nav {
+  padding: 15px 30px;
+  background-color: white;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 100;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo (Text) */
+.logo a {
+  font-size: 24px; /* Adjust text size */
+  font-weight: bold; /* Make the text bold */
+  color: black; /* Adjust the color as needed */
+  text-decoration: none; /* Remove underline */
+}
+
+.logo a:hover {
+  color: aquamarine; /* Change color on hover */
+}
+
+/* Centering the logo with other menu items */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Menu Styling */
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+
+
+/* Desktop Menu */
+.menu {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+
+.menu li {
+  padding: 10px 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: aquamarine;
+}
+
+/* Hamburger Menu Button (Mobile) */
+.menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+      display: none; /* Hide menu on mobile */
+  }
+  .menu-button {
+      display: block; /* Show hamburger icon on mobile */
+  }
+}
+
+/* Sidebar (Mobile) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Hidden by default */
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 15px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  transition: right 0.5s ease-in-out;
+}
+
+.sidebar a {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar a:hover {
+  background-color: #f0f0f0;
+}
+
+.close-button {
+  margin-bottom: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+.sidebar.show {
+  right: 0; /* Slide the sidebar into view */
+}
+
+/* Hide the menu button when sidebar is open */
+.sidebar.show + .menu-button {
+  display: none;
+}
+
+/* Ensure the z-index of the sidebar is above everything */
+.sidebar {
+  z-index: 999;
+}
+
+  
+/* Header Section with Background Image */
+header {
+  background-image: url('img/background.jpg'); /* Replace 'your-image.jpg' with the actual path to your image */
+  background-size: cover; /* Ensures the image covers the entire section */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 100vh; /* Full viewport height for the header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  color: #fff; /* White text for better contrast */
+}
+
+/* Optional: Add a dark overlay for better text contrast */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity to suit the visibility of the text */
+  z-index: 1;
+}
+
+header .container {
+  position: relative;
+  z-index: 2; /* Ensure the text and buttons are above the background and overlay */
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+header button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Sections */
+section {
+  margin-bottom: 40px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 300px; /* Adjust as necessary */
+  margin-right: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 4%;
+  object-fit: cover;
+  /* filter: drop-shadow(2px 4px 6px black); */
+  /* Fade effect */
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+.about-text {
+  flex: 3;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Tools and Hobbies Section */
+#tools-hobbies {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.tools, .hobbies {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tools-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.tool-icon {
+  width: 50px;
+  height: 50px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hobbies p {
+  font-size: 1em;
+  text-align: center;
+}
+
+/* My Works Section */
+#my-works {
+  margin-bottom: 40px;
+}
+
+#my-works h2 {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.recent-works {
+  text-align: center;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.works-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.work-image {
+  width: 100%;         /* Ensures images fill the container */
+  height: 200px;       /* Fixes a uniform height for all images */
+  object-fit: cover;   /* Ensures the images cover the area without distortion */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.work-image:hover {
+  transform: scale(1.05);
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;  /* Enables scrolling if the image is larger than the viewport */
+  background-color: rgba(0, 0, 0, 0.9);  /* Black background with opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide the modal by default */
+#myModal {
+  display: none;
+}
+
+
+/* Modal Content (the image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 100%;   /* Scale the image to fit within the viewport */
+  max-height: 90%;  /* Scale the image to fit within the viewport */
+  object-fit: contain;  /* Ensure the image retains its aspect ratio */
+}
+
+/* Caption of Modal Image */
+#caption {
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Contact Section */
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  /* background-color: #f9f9f9; */
+  border-radius: 10px;
+  margin-top: 40px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+#contact h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#contact p {
+  font-size: 1.1em;
+  margin-bottom: 25px;
+}
+
+.contact-btns {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.contact-btn:hover {
+  background-color: #555;
+}
+
+.whatsapp-btn {
+  background-color: #25D366; /* WhatsApp green */
+}
+
+.whatsapp-btn:hover {
+  background-color: #20b858; /* Darker WhatsApp green */
+}
+
+.social-info p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+/* Beginning of Footer*/
+  .container{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #24262b;
+      padding: 70px 0;
+  }
+  .footer-col{
+    flex: 1; /* Allow columns to grow and fill the space */
+    width: 33.33%; /* Set each column to take up one-third of the row */
+    padding: 0 15px;
+    margin-bottom: 30px; /* Ensure there's space between rows on smaller screens */
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color:aquamarine;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col p {
+    font-size: 16px; /* Makes the font size readable */
+    color: #bbbbbb; /* Uses a softer color to match the footer */
+    line-height: 1.6; /* Adds some line height for better spacing */
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+  }
+  
+/* End of Footer*/
+
+
+
+
+
+/* Styles for screens up to 768px */
+  @media (max-width: 768px) {
+    .footer-col {
+      width: 50%; /* Stack footer columns vertically */
+      margin: 5px 15px; /* Space between columns */
+    }
+    header, footer {
+        font-size: 0.9rem;
+    }
+      .sidebar{
+        width: -100%;
+        right: -100%; /* Fully hides it off-screen */
+      }
+      header h1 {
+        font-size: 2em;
+    }
+  
+    header p {
+        font-size: 1em;
+    }
+  
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-image {
+      margin-bottom: 20px;
+    }
+  
+    .about-text {
+      text-align: center;
+    }
+
+    .hideOnMobile{
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+    .logo img{
+      display: block;
+    }
+    .footer-col{
+      width: 50%;
+  }
+
+  #tools-hobbies {
+    flex-direction: column;
+  }
+
+  .tools, .hobbies {
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .hobbies p {
+    text-align: center;
+  }
+
+  .works-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+  }
+

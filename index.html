@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test2</title>
+  <link rel="stylesheet" href="styles.css"><!--link to CSS-->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"><!--For the Footer Social links icons-->
+</head>
+
+
+<!-- Navbar -->
+<nav>
+  <div class="navbar-container">
+      <!-- Logo Text -->
+      <div class="logo">
+          <a href="#">Kaka Tatya</a>
+      </div>
+
+      <!-- Menu items (Desktop) -->
+      <ul class="menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#tools-hobbies">Tools</a></li>
+          <li><a href="#my-works">My Works</a></li>
+      </ul>
+
+      <!-- Hamburger Menu (Mobile) -->
+      <div class="menu-button" onclick="showSidebar()">
+          <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+              <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+          </svg>
+      </div>
+  </div>
+
+  <!-- Sidebar (Mobile) -->
+  <ul class="sidebar" id="sidebar">
+      <!-- Close Button -->
+      <li class="close-button" onclick="hideSidebar()">
+          <a href="javascript:void(0)">
+              <svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26">
+                  <path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/>
+              </svg>
+          </a>
+      </li>
+      <!-- Sidebar Links -->
+      <li><a href="#about" onclick="hideSidebar()">About</a></li>
+      <li><a href="#tools-hobbies" onclick="hideSidebar()">Tools</a></li>
+      <li><a href="#my-works" onclick="hideSidebar()">My Works</a></li>
+  </ul>
+</nav>
+
+
+
+<!--body-->
+ <body>
+
+    <!--beginning of header-->
+<header>
+    
+      <div class="container">
+          <h1>Kaka Tatya <br>Portfolio</h1>
+          <p>3D Interior Designer</p>
+          <button onclick="scrollToSection('my-works')">View My Work</button>
+          <button onclick="scrollToSection('contact')">Book a Call</button>
+      </div>
+</header>
+<!--end of header-->
+
+ <!-- About Section -->
+<section id="about" class="container">
+    <div class="about-content">
+        <div class="about-image">
+            <img src="img/headshot1-removebg-removebg-preview.png" alt="Tatya's Photo" />
+        </div>
+        <div class="about-text">
+            <h2>Hi! I’m Tatya</h2>
+            <p>As a 3D interior designer, I leverage my artistic talents and technical skills to create photorealistic renderings that bring client visions to life. I am passionate about using 3D technology to enhance the design process. <br><br> My portfolio showcases my creativity and expertise in designing beautiful, personalized interiors for residential and commercial settings.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Tools and Hobbies Section -->
+<section id="tools-hobbies" class="container">
+    <div class="tools">
+      <h3>Tools</h3>
+      <div class="tools-icons">
+        <img src="img/5d-logo.png" alt="5D Planner" class="tool-icon">
+        <img src="img/room-planner.png" alt="Room Planner" class="tool-icon">
+      </div>
+    </div>
+  
+    <div class="hobbies">
+      <h3>Hobbies</h3>
+      <p>Singing | Arts And Entertainment | Photography | Traveling | Testing New Interior Design Software</p>
+    </div>
+  </section>
+  
+<!-- My Works Section -->
+<section id="my-works" class="container">
+    <h2>MY WORKS</h2>
+    <p class="recent-works">Recent Ones</p>
+    <div class="works-gallery">
+        <img src="img/img1.jpg" alt="Work 1" class="work-image" alt="Work 1" onclick="openModal(this.src)">
+        <img src="img/img2.jpg" alt="Work 2" class="work-image" alt="Work 2" onclick="openModal(this.src)">
+        <img src="img/img3.jpg" alt="Work 3" class="work-image" alt="Work 3" onclick="openModal(this.src)">
+        <img src="img/img4.jpg" alt="Work 4" class="work-image" alt="Work 4" onclick="openModal(this.src)">
+        <img src="img/img5.jpg" alt="Work 5" class="work-image" alt="Work 5" onclick="openModal(this.src)">
+        <img src="img/img6.jpg" alt="Work 6" class="work-image" alt="Work 6" onclick="openModal(this.src)">
+        <img src="img/img7.jpg" alt="Work 7" class="work-image" alt="Work 7" onclick="openModal(this.src)">
+        <img src="img/img8.jpg" alt="Work 8" class="work-image" alt="Work 8" onclick="openModal(this.src)">
+        <img src="img/img9.jpg" alt="Work 9" class="work-image" alt="Work 6" onclick="openModal(this.src)">
+        <img src="img/img10.jpg" alt="Work 10" class="work-image" alt="Work 10" onclick="openModal(this.src)">
+        <img src="img/img11.jpg" alt="Work 11" class="work-image" alt="Work 11" onclick="openModal(this.src)">
+        <img src="img/img12.jpg" alt="Work 12" class="work-image" alt="Work 12" onclick="openModal(this.src)">
+        <img src="img/img13.jpg" alt="Work 13" class="work-image" alt="Work 13" onclick="openModal(this.src)">
+        <img src="img/img14.jpg" alt="Work 14" class="work-image" alt="Work 14" onclick="openModal(this.src)">
+        <img src="img/img15.jpg" alt="Work 15" class="work-image" alt="Work 15" onclick="openModal(this.src)">
+        <img src="img/img16.jpg" alt="Work 16" class="work-image" alt="Work 16" onclick="openModal(this.src)">
+        <img src="img/img17.jpg" alt="Work 17" class="work-image" alt="Work 17" onclick="openModal(this.src)">
+        <img src="img/img18.jpg" alt="Work 18" class="work-image" alt="Work 18" onclick="openModal(this.src)">
+        <img src="img/img19.jpg" alt="Work 19" class="work-image" alt="Work 19" onclick="openModal(this.src)">
+        <img src="img/img20.jpg" alt="Work 20" class="work-image" alt="Work 20" onclick="openModal(this.src)">
+        <img src="img/img21.jpg" alt="Work 21" class="work-image" alt="Work 21" onclick="openModal(this.src)">
+        <img src="img/img22.jpg" alt="Work 22" class="work-image" alt="Work 22" onclick="openModal(this.src)">
+        <img src="img/img23.jpg" alt="Work 23" class="work-image" alt="Work 23" onclick="openModal(this.src)">
+        <img src="img/img24.jpg" alt="Work 24" class="work-image" alt="Work 24" onclick="openModal(this.src)">
+        <img src="img/img25.jpg" alt="Work 25" class="work-image" alt="Work 25" onclick="openModal(this.src)">
+        <img src="img/img26.jpg" alt="Work 26" class="work-image" alt="Work 26" onclick="openModal(this.src)">
+        <img src="img/img27.jpg" alt="Work 27" class="work-image" alt="Work 27" onclick="openModal(this.src)">
+        <img src="img/img28.jpg" alt="Work 28" class="work-image" alt="Work 28" onclick="openModal(this.src)">
+        <img src="img/img29.jpg" alt="Work 29" class="work-image" alt="Work 29" onclick="openModal(this.src)">
+        <img src="img/img30.jpg" alt="Work 30" class="work-image" alt="Work 30" onclick="openModal(this.src)">
+        <img src="img/img31.jpg" alt="Work 31" class="work-image" alt="Work 31" onclick="openModal(this.src)">
+        <img src="img/img32.jpg" alt="Work 32" class="work-image" alt="Work 32" onclick="openModal(this.src)">
+        <img src="img/img33.jpg" alt="Work 33" class="work-image" alt="Work 33" onclick="openModal(this.src)">
+        <img src="img/img34.jpg" alt="Work 34" class="work-image" alt="Work 34" onclick="openModal(this.src)">
+        <img src="img/img35.jpg" alt="Work 35" class="work-image" alt="Work 35" onclick="openModal(this.src)">
+        <img src="img/img36.jpg" alt="Work 36" class="work-image" alt="Work 36" onclick="openModal(this.src)">
+        <img src="img/img37.jpg" alt="Work 37" class="work-image" alt="Work 37" onclick="openModal(this.src)">
+        <!-- <img src="img/img38.jpg" alt="Work 38" class="work-image" alt="Work 38" onclick="openModal(this.src)">
+        <img src="img/img39.jpg" alt="Work 39" class="work-image" alt="Work 39" onclick="openModal(this.src)">
+        <img src="img/img40.jpg" alt="Work 40" class="work-image" alt="Work 40" onclick="openModal(this.src)">
+        <img src="img/img41.jpg" alt="Work 41" class="work-image" alt="Work 41" onclick="openModal(this.src)">
+        <img src="img/img42.jpg" alt="Work 42" class="work-image" alt="Work 42" onclick="openModal(this.src)">
+        <img src="img/img43.jpg" alt="Work 43" class="work-image" alt="Work 43" onclick="openModal(this.src)">
+        <img src="img/img44.jpg" alt="Work 44" class="work-image" alt="Work 44" onclick="openModal(this.src)">
+        <img src="img/img45.jpg" alt="Work 45" class="work-image" alt="Work 45" onclick="openModal(this.src)">
+        <img src="img/img46.jpg" alt="Work 46" class="work-image" alt="Work 46" onclick="openModal(this.src)">
+        <img src="img/img47.jpg" alt="Work 47" class="work-image" alt="Work 47" onclick="openModal(this.src)">
+        <img src="img/img48.jpg" alt="Work 48" class="work-image" alt="Work 48" onclick="openModal(this.src)"> -->
+    </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="caption"></div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact" class="container">
+  <div class="contact-content">
+    <div class="contact-info">
+      <h3>Feeling Confused?</h3>
+      <p>I’d love to chat with you about how I can help.<br> Click the button below to book a call or send an email today.</p>
+      <div class="contact-btns">
+        <a href="tel:+2349045002001" class="contact-btn call-btn">Call Now</a>
+        <a href="mailto:kakatatyah@gmail.com?subject=Inquiry%20about%20your%20services" class="contact-btn email-btn">Send Email</a>
+        <a href="https://wa.me/2349044150286?text=Hello%2C%20I%27m%20interested%20in%20your%20services" class="contact-btn whatsapp-btn" target="_blank">WhatsApp Message</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--Beginning of Footer-->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="footer-col">
+        <h4>Address</h4>
+        <p>Kaka Tatya<br>
+           NIA QUARTERS, Lugbe<br>
+           Block 9, Flat 4 <br>FCT-Abuja, Nigeria<br><br>
+        </p>
+      </div>
+      
+      <div class="footer-col">
+        <h4>About</h4>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#tools-hobbies">Tools</a></li>
+            <li><a href="#my-works">My Works</a></li>
+        </ul>
+      </div>
+ 
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <p>Phone:<br> +234 904 500 2001<br>
+          Email:<br> kakatatyah@gmail.com<br>
+        </p>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect with Me On Social Media</h4>
+        <div class="social-links">
+          <a href="http://Instagram.com/tat_.ya"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/2349044150286?text=Hello%2C%20I%27m%20interested%20in%20your%20services"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://snapchat.com/t/pmxZ7BbO"><i class="fab fa-snapchat"></i></a>
+          <a href="https://www.linkedin.com/in/kaka-tatya-b50a66324?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><i class="fab fa-linkedin-in"></i></a>
+          
+        </div>
+      </div>  
+    </div>
+  </div>
+</footer>
+ <!--End of Footer-->
+
+ <script src="script.js"></script>
+
+
+        </body>
+</html>
