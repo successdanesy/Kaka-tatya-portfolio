@@ -11,6 +11,56 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Body */
+body {
+  background-color: #fafaf1; /* Soft cream background */
+  color: #333333; /* Dark charcoal text */
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; /* Serif for sophistication */
+  /* color: #2C5F2D; Deep forest green for a classy look */
+}
+
+/* Links */
+a {
+  color: #C9B037; /* Muted gold for links */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2C5F2D;
+  transition: color 0.3s ease;
+}
+
+/* Buttons */
+button {
+  background-color: #C9B037;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2C5F2D;
+  transition: background-color 0.3s ease;
+}
+
+/* Image Styling */
+img {
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 
 /* Container */
 .container {
@@ -310,7 +360,7 @@ h3 {
 
 .recent-works {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 0.9em;
   color: #666;
   margin-bottom: 30px;
 }
@@ -484,7 +534,7 @@ h3 {
     position: absolute;
     left:0;
     bottom: -10px;
-    background-color:aquamarine;
+    background-color:#fafaf1;
     height: 2px;
     box-sizing: border-box;
     width: 50px;
