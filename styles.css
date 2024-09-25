@@ -588,7 +588,7 @@ h3 {
 @media (max-width: 768px) {
   .footer-col {
     width: 50%; /* Stack footer columns vertically */
-    margin: 5px 5px; /* Space between columns */
+    margin: 5px 6px; /* Space between columns */
   }
   header, footer {
       font-size: 0.9rem;
