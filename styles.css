@@ -585,72 +585,72 @@ h3 {
 
 
 /* Styles for screens up to 768px */
-  @media (max-width: 768px) {
-    .footer-col {
-      width: 50%; /* Stack footer columns vertically */
-      margin: 5px 5px; /* Space between columns */
+@media (max-width: 768px) {
+  .footer-col {
+    width: 50%; /* Stack footer columns vertically */
+    margin: 5px 5px; /* Space between columns */
+  }
+  header, footer {
+      font-size: 0.9rem;
+  }
+    .sidebar{
+      width: -100%;
+      right: -100%; /* Fully hides it off-screen */
     }
-    header, footer {
-        font-size: 0.9rem;
-    }
-      .sidebar{
-        width: -100%;
-        right: -100%; /* Fully hides it off-screen */
-      }
-      header h1 {
-        font-size: 2em;
-    }
-  
-    header p {
-        font-size: 1em;
-    }
-  
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .about-content {
+    header h1 {
+      font-size: 2em;
+  }
+
+  header p {
+      font-size: 1em;
+  }
+
+  .gallery {
       flex-direction: column;
       align-items: center;
-    }
-  
-    .about-image {
-      margin-bottom: 20px;
-    }
-  
-    .about-text {
-      text-align: center;
-    }
-
-    .hideOnMobile{
-      display: none;
-    }
-    .menu-button{
-      display: block;
-    }
-    .logo img{
-      display: block;
-    }
-    .footer-col{
-      width: 60%;
   }
-
-  #tools-hobbies {
+  
+  .about-content {
     flex-direction: column;
+    align-items: center;
   }
 
-  .tools, .hobbies {
-    align-items: center;
+  .about-image {
     margin-bottom: 20px;
   }
 
-  .hobbies p {
+  .about-text {
     text-align: center;
   }
 
-  .works-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-}
+  .hideOnMobile{
+    display: none;
   }
+  .menu-button{
+    display: block;
+  }
+  .logo img{
+    display: block;
+  }
+  .footer-col{
+    width: 60%;
+}
+
+#tools-hobbies {
+  flex-direction: column;
+}
+
+.tools, .hobbies {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hobbies p {
+  text-align: center;
+}
+
+.works-gallery {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+}
 
