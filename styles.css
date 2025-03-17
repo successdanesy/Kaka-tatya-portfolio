@@ -365,18 +365,69 @@ h3 {
   margin-bottom: 30px;
 }
 
+/* Initial Gallery Styles */
+.initial-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+  align-content: center;
+}
+
+/* Collapsible Gallery Styles */
+.collapsible-gallery {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.collapsible-gallery.active {
+  max-height: 5000px; /* Adjust based on your content height */
+}
+
 .works-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 10px;
+  margin-bottom: 20px;
+}
+
+.additional-gallery {
+  display: none; /* Hidden by default */
+}
+
+.additional-gallery.active {
+  display: grid; /* Show when active */
+}
+
+/* Button Styles */
+.toggle-gallery-btn,
+.show-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 30px;
+  background-color: #2b2b2b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+
+.toggle-gallery-btn:hover,
+.show-more-btn:hover {
+  background-color: #0056b3;
 }
 
 .work-image {
-  width: 100%;         /* Ensures images fill the container */
-  height: 200px;       /* Fixes a uniform height for all images */
-  object-fit: cover;   /* Ensures the images cover the area without distortion */
+  width: 100%;
+  height: 200px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures images cover the area without distortion */
   border-radius: 10px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .work-image:hover {
@@ -441,217 +492,121 @@ h3 {
 }
 
 /* Contact Section */
-#contact {
+.contact {
+  padding: 80px 20px;
+  background-color: #f8f9fa; /* Light gray for better contrast */
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  align-items: center;
+}
+
+.contact-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 20px;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  align-items: center; /* Center align the text and button group */
+}
+
+.contact-text h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contact-text p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contact-text .button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center; /* Center the buttons horizontally */
+}
+
+.contact-text .contact-button {
+  display: flex;
   align-items: center;
-  padding: 40px;
-  /* background-color: #f9f9f9; */
-  border-radius: 10px;
-  margin-top: 40px;
-  border: 1px solid #e0e0e0;
+  gap: 10px;
+  background-color: #2b2b2b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
   text-align: center;
 }
 
-#contact h3 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-  font-weight: bold;
+.contact-text .contact-button i {
+  font-size: 1.2rem;
 }
 
-#contact p {
-  font-size: 1.1em;
-  margin-bottom: 25px;
+.contact-text .contact-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Adds a subtle zoom effect */
 }
 
-.contact-btns {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.contact-btn {
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-.contact-btn:hover {
-  background-color: #555;
-}
-
-.whatsapp-btn {
-  background-color: #25D366; /* WhatsApp green */
-}
-
-.whatsapp-btn:hover {
-  background-color: #20b858; /* Darker WhatsApp green */
-}
-
-.social-info p {
-  font-size: 0.9em;
-  color: #555;
-}
 
 
 /* Beginning of Footer*/
-  .container{
-    max-width: 1170px;
-    margin:auto;
-  }
-  .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  ul{
-    list-style: none;
-  }
-  .footer{
-    background-color: #24262b;
-      padding: 70px 0;
-  }
-  .footer-col{
-    flex: 1; /* Allow columns to grow and fill the space */
-    width: 40%; /* Set each column to take up one-third of the row */
-    padding: 3px 2px;
-    margin-bottom: 50px; /* Ensure there's space between rows on smaller screens */
-    margin: 5px 13px; /* Space between columns */
-  }
-  .footer-col h4{
-    font-size: 18px;
-    color: #ffffff;
-    text-transform: capitalize;
-    margin-bottom: 35px;
-    font-weight: 500;
-    position: relative;
-  }
-  .footer-col h4::before{
-    content: '';
-    position: absolute;
-    left:0;
-    bottom: -10px;
-    background-color:#fafaf1;
-    height: 2px;
-    box-sizing: border-box;
-    width: 50px;
-  }
-  .footer-col p {
-    font-size: 16px; /* Makes the font size readable */
-    color: #bbbbbb; /* Uses a softer color to match the footer */
-    line-height: 1.6; /* Adds some line height for better spacing */
-  }
-  .footer-col ul li:not(:last-child){
-    margin-bottom: 10px;
-  }
-  .footer-col ul li a{
-    font-size: 16px;
-    text-transform: capitalize;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 300;
-    color: #bbbbbb;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  .footer-col ul li a:hover{
-    color: #ffffff;
-    padding-left: 8px;
-  }
-  .footer-col .social-links a{
-    display: inline-block;
-    height: 40px;
-    width: 40px;
-    background-color: rgba(255,255,255,0.2);
-    margin:0 10px 10px 0;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    color: #ffffff;
-    transition: all 0.5s ease;
-  }
-  .footer-col .social-links a:hover{
-    color: #24262b;
-    background-color: #ffffff;
-  }
+.footer {
+  background-color: #2b2b2b; /* Dark background */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  margin-top: auto; /* Ensures footer stays at the bottom */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.footer-content {
+  margin-bottom: 15px;
+}
+
+.footer-content p {
+  margin: 0 0 15px;
+  font-size: 16px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 50%; /* Circular background on hover */
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Adds a subtle zoom effect */
+}
+
+.footer-note {
+  font-size: 12px;
+  color: #aaa; /* Subtle gray text */
+  margin-top: 10px;
+  line-height: 1.5;
+}
   
 /* End of Footer*/
-
-
-
-
-
-/* Styles for screens up to 768px */
-@media (max-width: 768px) {
-  .footer-col {
-    width: 50%; /* Stack footer columns vertically */
-    margin: 5px 13px; /* Space between columns */
-    padding: 3px 5px;
-  }
-  header, footer {
-      font-size: 0.7rem;
-  }
-    .sidebar{
-      width: -100%;
-      right: -100%; /* Fully hides it off-screen */
-    }
-    header h1 {
-      font-size: 2em;
-  }
-
-  header p {
-      font-size: 1em;
-  }
-
-  .gallery {
-      flex-direction: column;
-      align-items: center;
-  }
-  
-  .about-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-image {
-    margin-bottom: 20px;
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
-  .hideOnMobile{
-    display: none;
-  }
-  .menu-button{
-    display: block;
-  }
-  .logo img{
-    display: block;
-  }
-  .footer-col{
-    width: 60%;
-}
-
-#tools-hobbies {
-  flex-direction: column;
-}
-
-.tools, .hobbies {
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.hobbies p {
-  text-align: center;
-}
-
-.works-gallery {
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-}
-}
